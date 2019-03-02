@@ -1,3 +1,5 @@
+[![Pyversions](https://img.shields.io/pypi/pyversions/ibm-analytics-engine-python.svg?style=flat-square)](https://pypi.python.org/pypi/ibm-analytics-engine-python)
+
 # enaclient
 command-line client for retrieving ENA sequence metadata through GA4GH refget API
 
