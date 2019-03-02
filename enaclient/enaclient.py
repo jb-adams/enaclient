@@ -88,31 +88,33 @@ class ENAClient:
 
     def query_ena_all(self):
 
-        if self.output_mode == ENAClient.OUTPUT_MODE_FILE:
-            self.output_file = open(self.args_dict["output_file"], "a")
+        if self.valid_args:
 
-        self.__output_batch_prefix()
+            if self.output_mode == ENAClient.OUTPUT_MODE_FILE:
+                self.output_file = open(self.args_dict["output_file"], "a")
 
-        if self.input_mode == ENAClient.INPUT_MODE_BATCH:
-            input_file = open(self.args_dict["input_file"], "r")
-            input_line = input_file.readline()
-            while (input_line):
-                sequence_id = input_line.rstrip()
-                response_string = self.query_ena(sequence_id)
+            self.__output_batch_prefix()
 
+            if self.input_mode == ENAClient.INPUT_MODE_BATCH:
+                input_file = open(self.args_dict["input_file"], "r")
                 input_line = input_file.readline()
-                if input_line:
-                    self.__output(response_string)
-                    self.__output_batch_separator()
-                else:
-                    self.__output(response_string + "\n")
+                while (input_line):
+                    sequence_id = input_line.rstrip()
+                    response_string = self.query_ena(sequence_id)
 
-        else:
-            sequence_id = self.args_dict["sequence_id"]
-            response_string = self.query_ena(sequence_id)
-            self.__output(response_string + "\n")
+                    input_line = input_file.readline()
+                    if input_line:
+                        self.__output(response_string)
+                        self.__output_batch_separator()
+                    else:
+                        self.__output(response_string + "\n")
 
-        self.__output_batch_suffix()
+            else:
+                sequence_id = self.args_dict["sequence_id"]
+                response_string = self.query_ena(sequence_id)
+                self.__output(response_string + "\n")
+
+            self.__output_batch_suffix()
 
     def query_ena(self, sequence_id):
         endpoint = ENAClient.API_BASE_URL + "sequence/" + sequence_id + "/metadata"
@@ -176,11 +178,3 @@ class ENAClient:
             print(to_write, end="")
         elif self.output_mode == ENAClient.OUTPUT_MODE_FILE:
             self.output_file.write(to_write)
-
-def main():
-    client = ENAClient()
-    if client.valid_args:
-        client.query_ena_all()
-
-if __name__ == "__main__":
-    main()
