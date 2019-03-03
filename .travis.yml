@@ -5,4 +5,9 @@ python:
   - "3.6"
 install:
   - python setup.py install
-script: pytest
+before_script:
+  - pip install -r requirements.txt
+script:
+  - pytest -v --cov=enaclient --cov-report term-missing
+after-success:
+  - coveralls
