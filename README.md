@@ -12,7 +12,7 @@ Note: Due to dependencies, enaclient is compatible with Python versions 3.4 or h
 
 ## Installation
 
-Provided that python3 is already installed on the local machine, execute the following steps to set up the enaclient:
+Provided that python3 is already installed on the local machine, open a terminal and execute the following steps via command line to set up the enaclient:
 
 1. Clone enaclient repository to local machine:
 ```bash
