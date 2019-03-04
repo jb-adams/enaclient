@@ -6,6 +6,10 @@
 # enaclient
 command-line client for retrieving ENA sequence metadata through GA4GH refget API
 
+The enaclient can be used to retrieve ENA sequence metadata through the refget API. Requests can be submitted in single or batch mode, and returned metadata can be formated as JSON, XML, or YAML. Responses can be printed to screen or written to an output file.
+
+Note: Due to dependencies, enaclient is compatible with Python versions 3.4 or higher.
+
 ## Installation
 
 Provided that python3 is already installed on the local machine, execute the following steps to set up the enaclient:
@@ -14,9 +18,13 @@ Provided that python3 is already installed on the local machine, execute the fol
 ```bash
 git clone https://github.com/jb-adams/enaclient.git
 ```
-2. Enter enaclient directory and install the enaclient library and associated dependencies:
+2. Enter enaclient directory and install dependencies:
 ```bash
 cd enaclient
+pip install -r requirements.txt
+```
+3. Install the enaclient library
+```bash
 python setup.py install
 ```
 3. Enter the scripts directory and execute the run-enaclient.py script via python
@@ -57,7 +65,7 @@ By default, the enaclient only gets metadata for a single sequence id. The enacl
 3050107579885e1608e6fe50fae3f8d4
 ```
 
-To run enaclient in batch mode, specify the input file with the -i/--input_file parameter. Note: the -s and -i options are mutually exclusive.
+To run enaclient in batch mode, specify the input file with the -i/--input_file parameter. In the example below, the input file is located at data/sequence_ids.txt. Note: the -s and -i options are mutually exclusive.
 ```bash
 # template
 python run-enaclient.py -i ${INPUT_FILE}
