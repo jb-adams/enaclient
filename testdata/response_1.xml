@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<sequence_group>
+    <sequence>
+        <req_seq_id>3050107579885e1608e6fe50fae3f8d0</req_seq_id>
+        <status_code>200</status_code>
+        <metadata>
+            <id>3050107579885e1608e6fe50fae3f8d0</id>
+            <md5>3050107579885e1608e6fe50fae3f8d0</md5>
+            <trunc512/>
+            <length>7156</length>
+            <aliases/>
+        </metadata>
+    </sequence>
+</sequence_group>

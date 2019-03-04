@@ -1,6 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Travis (.org)](https://img.shields.io/travis/jb-adams/enaclient.svg)
 [![Python 3.4+](https://img.shields.io/badge/python-3.4+-blue.svg)](https://www.python.org/downloads/release/python-372/)
+![Travis (.org)](https://img.shields.io/travis/jb-adams/enaclient.svg)
+[![Coverage Status](https://coveralls.io/repos/github/jb-adams/enaclient/badge.svg?branch=master)](https://coveralls.io/github/jb-adams/enaclient?branch=master)
 
 # enaclient
 command-line client for retrieving ENA sequence metadata through GA4GH refget API
@@ -13,16 +14,16 @@ Provided that python3 is already installed on the local machine, execute the fol
 ```bash
 git clone https://github.com/jb-adams/enaclient.git
 ```
-2. Enter enaclient directory and install dependencies:
+2. Enter enaclient directory and install the enaclient library and associated dependencies:
 ```bash
 cd enaclient
-pip install -r requirements.txt
+python setup.py install
 ```
-3. Execute enaclient script via python
+3. Enter the scripts directory and execute the run-enaclient.py script via python
 ```bash
-python enaclient.py
+cd scripts
+python run-enaclient.py
 ```
-
 
 ## Usage
 
@@ -30,20 +31,20 @@ python enaclient.py
 
 The enaclient can be executed through python3 from the command-line:
 ```bash
-python enaclient.py
+python run-enaclient.py
 ```
 
 Use the -h parameter to display the help dialog:
 ```bash
-python enaclient.py -h
+python run-enaclient.py -h
 ```
 
 Specify a sequence id/md5sum with the "-s" parameter to get associated metadata
 ```bash
 # template
-python enaclient.py -s ${SEQUENCE_ID}
+python run-enaclient.py -s ${SEQUENCE_ID}
 # example
-python enaclient.py -s 3050107579885e1608e6fe50fae3f8d0
+python run-enaclient.py -s 3050107579885e1608e6fe50fae3f8d0
 ```
 
 ### Run in batch mode
@@ -59,27 +60,27 @@ By default, the enaclient only gets metadata for a single sequence id. The enacl
 To run enaclient in batch mode, specify the input file with the -i/--input_file parameter. Note: the -s and -i options are mutually exclusive.
 ```bash
 # template
-python enaclient.py -i ${INPUT_FILE}
+python run-enaclient.py -i ${INPUT_FILE}
 # example
-python enaclient.py -i data/sequence_ids.txt
+python run-enaclient.py -i data/sequence_ids.txt
 ```
 
 ### Specify output format
 By default, sequence metadata is returned in JSON format. The enaclient can also display metadata in XML and YAML. Specify output format with the -f/--output_format parameter.
 ```bash
 # template
-python enaclient.py -i ${INPUT_FILE} -f ${FORMAT}
+python run-enaclient.py -i ${INPUT_FILE} -f ${FORMAT}
 # example - display metadata in XML
-python enaclient.py -i ${INPUT_FILE} -f xml
+python run-enaclient.py -i ${INPUT_FILE} -f xml
 # example - display metadata in YAML
-python enaclient.py -i ${INPUT_FILE} -f yaml
+python run-enaclient.py -i ${INPUT_FILE} -f yaml
 ```
 
 ### Write to an output file
 By default, sequence metadata is printed to stdout. The enaclient can also write metadata to an output file. Specify the output file with the -o/--output_file parameter.
 ```bash
 # template
-python enaclient.py -i ${INPUT_FILE} -o ${OUTPUT_FILE}
+python run-enaclient.py -i ${INPUT_FILE} -o ${OUTPUT_FILE}
 # example
-python enaclient.py -i data/sequence_ids.txt -o data/metadata.json
+python run-enaclient.py -i data/sequence_ids.txt -o data/metadata.json
 ```

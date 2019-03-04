@@ -1,2 +1,10 @@
 enaclient-venv
 __pycache__
+.coverage
+.coveralls.yml
+build
+dist
+enaclient.egg-info
+testdata/output.json
+testdata/output.xml
+testdata/output.yaml

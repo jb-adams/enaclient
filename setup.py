@@ -8,7 +8,7 @@ setuptools.setup(
     version="1.0.0",
     author="Jeremy Adams",
     author_email="jeremybr.adams@gmail.com",
-    description="A small example package",
+    description="Retrieve ENA sequence metadata through refget API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jb-adams/enaclient",
