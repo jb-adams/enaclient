@@ -1,57 +1,57 @@
 [
     {
-        "req_seq_id": "3050107579885e1608e6fe50fae3f8d0",
-        "status_code": 200,
         "metadata": {
+            "aliases": [],
             "id": "3050107579885e1608e6fe50fae3f8d0",
-            "md5": "3050107579885e1608e6fe50fae3f8d0",
-            "trunc512": null,
             "length": 7156,
-            "aliases": []
-        }
+            "md5": "3050107579885e1608e6fe50fae3f8d0",
+            "trunc512": null
+        },
+        "req_seq_id": "3050107579885e1608e6fe50fae3f8d0",
+        "status_code": 200
     },
     {
+        "metadata": {
+            "aliases": [],
+            "id": null,
+            "length": null,
+            "md5": null,
+            "trunc512": null
+        },
         "req_seq_id": "3050107579885e1608e6fe50fae3f8d1",
-        "status_code": 404,
-        "metadata": {
-            "id": null,
-            "md5": null,
-            "trunc512": null,
-            "length": null,
-            "aliases": []
-        }
+        "status_code": 404
     },
     {
+        "metadata": {
+            "aliases": [],
+            "id": null,
+            "length": null,
+            "md5": null,
+            "trunc512": null
+        },
         "req_seq_id": "3050107579885e1608e6fe50fae3f8d2",
-        "status_code": 404,
-        "metadata": {
-            "id": null,
-            "md5": null,
-            "trunc512": null,
-            "length": null,
-            "aliases": []
-        }
+        "status_code": 404
     },
     {
+        "metadata": {
+            "aliases": [],
+            "id": null,
+            "length": null,
+            "md5": null,
+            "trunc512": null
+        },
         "req_seq_id": "3050107579885e1608e6fe50fae3f8d3",
-        "status_code": 404,
-        "metadata": {
-            "id": null,
-            "md5": null,
-            "trunc512": null,
-            "length": null,
-            "aliases": []
-        }
+        "status_code": 404
     },
     {
-        "req_seq_id": "3050107579885e1608e6fe50fae3f8d4",
-        "status_code": 404,
         "metadata": {
+            "aliases": [],
             "id": null,
-            "md5": null,
-            "trunc512": null,
             "length": null,
-            "aliases": []
-        }
+            "md5": null,
+            "trunc512": null
+        },
+        "req_seq_id": "3050107579885e1608e6fe50fae3f8d4",
+        "status_code": 404
     }
 ]

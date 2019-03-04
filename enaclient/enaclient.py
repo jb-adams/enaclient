@@ -276,7 +276,8 @@ class ENAClient:
             # format response as json
             output_format = self.get_output_format()
             if output_format == ENAClient.OUTPUT_FORMAT_JSON:
-                response_string = json.dumps(response_dict, indent=4)
+                response_string = json.dumps(response_dict, indent=4,
+                                             sort_keys=True)
             # format response as xml
             elif output_format == ENAClient.OUTPUT_FORMAT_XML:
                 xml = dicttoxml(response_dict, custom_root="sequence",
