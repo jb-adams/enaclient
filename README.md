@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```bash
 python setup.py install
 ```
-3. Enter the scripts directory and execute the run-enaclient.py script via python
+4. Enter the scripts directory and execute the run-enaclient.py script via python
 ```bash
 cd scripts
 python run-enaclient.py
